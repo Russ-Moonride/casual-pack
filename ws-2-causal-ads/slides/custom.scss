@@ -1,0 +1,359 @@
+/*-- scss:defaults --*/
+
+// Berry & cream palette
+$body-bg: #ECE2D0;
+$body-color: #2A2A2A;
+$presentation-heading-color: #6D2E46;
+$presentation-heading-font: Georgia, serif;
+$font-family-sans-serif: "Helvetica Neue", "Calibri", sans-serif;
+$presentation-font-size-root: 33px;
+$link-color: #A26769;
+$selection-bg: #6D2E46;
+
+/*-- scss:rules --*/
+
+.reveal h1, .reveal h2, .reveal h3 {
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+.reveal .slide-number {
+  color: #6D2E46;
+  background: transparent;
+  font-family: Calibri, sans-serif;
+}
+
+// Title slide (background-color comes from title-slide-attributes in YAML).
+.reveal section#title-slide {
+  color: #FAF6F1;
+  text-align: left;
+}
+.reveal section#title-slide h1.title,
+.reveal section#title-slide h2.subtitle,
+.reveal section#title-slide .quarto-title-author-name,
+.reveal section#title-slide .date {
+  color: #FAF6F1;
+}
+.reveal section#title-slide h1.title {
+  font-size: 2.6em;
+  margin-bottom: 0.3em;
+}
+.reveal section#title-slide h2.subtitle {
+  color: #ECE2D0;
+  font-style: italic;
+  font-size: 1.1em;
+  font-weight: 400;
+}
+
+// Berry-colored left rail on every content slide. Use a thinner rail and
+// push it just outside the content area so it never clips the first
+// character of any title or body text.
+// Closing slide (dark background, no left rail)
+.reveal section.closing-slide {
+  color: #FAF6F1;
+  text-align: left;
+}
+.reveal section.closing-slide h2 {
+  color: #FAF6F1;
+  font-size: 2.6em;
+}
+
+.reveal .slides > section:not(#title-slide):not(.stack):not(.closing-slide) {
+  padding-left: 22px;
+}
+.reveal .slides > section.stack > section {
+  padding-left: 22px;
+}
+.reveal .slides > section:not(#title-slide):not(.stack):not(.closing-slide)::before,
+.reveal .slides > section.stack > section::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 6px;
+  background: #6D2E46;
+}
+
+// Stat callout cards
+.stat-card {
+  background: #FFFFFF;
+  border: 1px solid #A26769;
+  padding: 0.6em 0.4em;
+  text-align: center;
+  border-radius: 4px;
+  height: 100%;
+}
+.stat-card .label {
+  font-size: 0.6em;
+  color: #5C5C5C;
+  font-style: italic;
+}
+.stat-card .headline {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 0.85em;
+  color: #6D2E46;
+  margin-bottom: 0.3em;
+}
+.stat-card .mcmc-label  { font-size: 0.45em; color: #3060A0; font-weight: 700; margin-top: 0.4em; }
+.stat-card .mcmc-value  { font-family: Georgia, serif; font-size: 1.1em; font-weight: 700; color: #2A2A2A; }
+.stat-card .pfn-label   { font-size: 0.45em; color: #B85042; font-weight: 700; margin-top: 0.3em; }
+.stat-card .pfn-value   { font-family: Georgia, serif; font-size: 1.1em; font-weight: 700; color: #B85042; }
+
+// Process / numbered step boxes
+.step-box {
+  background: #FFFFFF;
+  border: 1px solid #A26769;
+  border-radius: 4px;
+  padding: 1em 0.7em 0.7em 0.7em;
+  position: relative;
+  margin-top: 1.2em;
+  height: 100%;
+}
+.step-box .num {
+  position: absolute;
+  top: -0.7em; left: 50%;
+  transform: translateX(-50%);
+  width: 1.5em; height: 1.5em;
+  background: #6D2E46;
+  color: #FAF6F1;
+  border-radius: 50%;
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 0.7em;
+  display: flex; align-items: center; justify-content: center;
+}
+.step-box .title {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  color: #6D2E46;
+  font-size: 0.75em;
+  text-align: center;
+  margin-bottom: 0.4em;
+}
+.step-box .body { font-size: 0.5em; color: #2A2A2A; }
+
+// Big number callouts
+.big-num {
+  font-family: Georgia, serif;
+  font-size: 2.4em;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+}
+.big-num.pfn  { color: #6D2E46; }
+.big-num.s    { color: #B85042; }
+.big-num.t    { color: #3060A0; }
+.small-cap {
+  font-size: 0.5em;
+  color: #5C5C5C;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// Two-column pros/cons
+.col-good { border-left: 4px solid #4A7A4A; padding: 0.3em 0.8em; }
+.col-bad  { border-left: 4px solid #B85042; padding: 0.3em 0.8em; }
+
+// Compare-row used in causal slide
+.compare-row {
+  padding: 0.3em 0.4em;
+  margin-bottom: 0.4em;
+  border-bottom: 1px solid #A26769;
+  font-size: 0.6em;
+}
+.label-row {
+  font-weight: 700;
+  color: #2A2A2A;
+  font-family: Georgia, serif;
+}
+.col-header-good {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 1.4em;
+  color: #4A7A4A;
+  display: block;
+  margin-bottom: 0.4em;
+}
+.col-header-bad {
+  font-family: Georgia, serif;
+  font-weight: 700;
+  font-size: 1.4em;
+  color: #B85042;
+  display: block;
+  margin-bottom: 0.4em;
+}
+
+// Numbers panel
+.numbers-panel {
+  background: #FFFFFF;
+  border: 1px solid #A26769;
+  border-radius: 4px;
+  padding: 0.5em 0.7em;
+  font-size: 0.55em;
+}
+.numbers-panel .label { color: #5C5C5C; font-size: 0.95em; margin-top: 0.4em; }
+.numbers-panel .pfn { color: #B85042; font-weight: 700; }
+.numbers-panel .mcmc { color: #3060A0; font-weight: 700; }
+.numbers-panel .note { color: #A26769; font-style: italic; font-size: 0.85em; display: block; margin-bottom: 0.3em; }
+
+// Inline note span (used outside numbers-panel context)
+.note-inline {
+  color: #A26769;
+  font-style: italic;
+  font-size: 0.9em;
+}
+
+// Unified title sizing — slide 2 (.smaller) used to differ from slide 3 (default).
+.reveal h2 {
+  font-size: 1.5em;
+  margin-bottom: 0.4em;
+}
+.reveal section.smaller h2 {
+  font-size: 1.5em;   // same as non-smaller for consistency
+}
+
+// Reveal slide content default top margin tightening
+.reveal .slides section { padding-top: 0.5em; }
+
+// Closing slide
+.reveal .slides > section.closing-slide {
+  padding-left: 0;
+  text-align: center;
+}
+.reveal .slides > section.closing-slide::before { display: none; }
+.reveal .slides > section.closing-slide,
+.reveal .slides > section.closing-slide h2 {
+  color: #FAF6F1;
+}
+.reveal .slides > section.closing-slide h2 {
+  font-size: 2.4em;
+  margin-bottom: 0.4em;
+}
+.closing-content { color: #ECE2D0; font-size: 0.7em; line-height: 1.5; }
+.closing-q       { color: #FAF6F1; font-family: Georgia, serif; font-size: 1.8em;
+                   font-style: italic; display: block; margin: 0.4em 0 0.6em 0; }
+.closing-link    { color: #FAF6F1; font-family: Consolas, monospace; }
+.closing-foot    { color: #ECE2D0; font-size: 0.7em; font-style: italic; opacity: 0.85; }
+
+// "Tagline" italic centered line
+.tagline {
+  text-align: center;
+  font-style: italic;
+  color: #2A2A2A;
+  font-size: 1.0em;
+  margin-top: 0.5em;
+}
+
+// Footer text
+.footer-note {
+  font-size: 0.55em;
+  color: #5C5C5C;
+  font-style: italic;
+  margin-top: 0.6em;
+}
+
+// Code blocks
+.reveal pre code {
+  font-size: 0.78em;
+  line-height: 1.35;
+  border-radius: 3px;
+  padding: 0.6em 0.8em;
+}
+
+// Center all slide images (graphics) reliably
+.reveal section img { display: block; margin-left: auto; margin-right: auto; }
+
+// Misc
+.reveal blockquote {
+  border-left: 4px solid #A26769;
+  background: rgba(162, 103, 105, 0.08);
+  padding: 0.3em 1em;
+  font-style: italic;
+  color: #2A2A2A;
+}
+
+// === MADS Session 2 additions ===
+
+// "Live in marimo" demo badge / divider
+.reveal section.live-slide::before { background: #B85042 !important; }
+.live-demo {
+  display: inline-block;
+  background: #B85042;
+  color: #FAF6F1;
+  font-family: Calibri, sans-serif;
+  font-weight: 700;
+  font-size: 0.5em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.25em 0.7em;
+  border-radius: 3px;
+  margin-bottom: 0.4em;
+}
+
+// Section divider slides (maroon bg, big centered title)
+.reveal section.section-divider { text-align: left; }
+.reveal section.section-divider h2 { color: #6D2E46; font-size: 2.2em; }
+.reveal section.section-divider .kicker {
+  font-family: Calibri, sans-serif; text-transform: uppercase; letter-spacing: 0.12em;
+  font-size: 0.55em; color: #A26769; font-weight: 700;
+}
+
+// The four pillars row
+.pillar {
+  background: #FFFFFF; border: 1px solid #A26769; border-radius: 4px;
+  padding: 0.6em 0.5em; height: 100%; text-align: center;
+}
+.pillar .icon { font-size: 1.4em; }
+.pillar .name { font-family: Georgia, serif; font-weight: 700; color: #6D2E46; font-size: 0.62em; margin: 0.2em 0; }
+.pillar .desc { font-size: 0.42em; color: #5C5C5C; }
+
+// Plot-placeholder card (until real figures land)
+.plot-todo {
+  border: 2px dashed #A26769; border-radius: 6px;
+  background: rgba(162,103,105,0.06);
+  padding: 1.2em; text-align: center; color: #A26769;
+  font-style: italic; font-size: 0.6em; margin: 0.4em 0;
+}
+.plot-todo strong { color: #6D2E46; font-style: normal; }
+
+// 2x2 pillar grid (compact cards, readable type)
+.pillar-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5em;
+  margin: 0.5em auto;
+  max-width: 78%;
+  align-items: start;
+}
+.pillar-grid .pillar { padding: 0.5em 0.7em; text-align: left; height: auto; }
+.pillar-grid .pillar .icon { font-size: 1.35em; }
+.pillar-grid .pillar .name { font-size: 0.8em; margin: 0.1em 0; }
+.pillar-grid .pillar .desc { font-size: 0.55em; line-height: 1.2; }
+
+// 3-up variant (roadmap / wrap)
+.pillar-grid.pillar-grid-3 { grid-template-columns: repeat(3, 1fr); max-width: 90%; }
+.pillar-grid .num3 {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 1.4em; height: 1.4em; border-radius: 50%;
+  background: #6D2E46; color: #FAF6F1;
+  font-family: Georgia, serif; font-weight: 700; font-size: 1.05em;
+  margin-bottom: 0.18em;
+}
+
+// Arc roadmap (foundation → application rhythm)
+.arc { max-width: 92%; margin: 0.5em auto; }
+.arc-row { font-size: 0.8em; padding: 0.55em 0.2em; border-bottom: 1px solid #E0D2C2; text-align: left; }
+.arc-row:last-child { border-bottom: none; }
+.arc-tag { display: inline-block; min-width: 9em; color: #A26769; font-style: italic; font-size: 0.82em; }
+.arc-row b { color: #6D2E46; }
+
+// Pillar row (flex, replaces nested fenced divs)
+.pillar-row { display: flex; gap: 0.6em; margin: 0.8em 0; align-items: stretch; }
+.pillar-row .pillar { flex: 1; }
+
+// Two-track "what you'll learn" cards
+.track { background: #FBF8F4; border: 1px solid #A26769; border-radius: 10px; padding: 0.5em 1.1em 0.9em; }
+.track-head { font-family: Georgia, serif; font-weight: 700; color: #6D2E46; font-size: 1.05em; margin: 0.3em 0 0.3em; }
+.track ul { margin: 0; }
+.track li { font-size: 0.82em; margin: 0.12em 0; }

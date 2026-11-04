@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 470" font-family="'Helvetica Neue', Calibri, sans-serif">
+  <!-- common cause -->
+  <rect x="450" y="30" width="220" height="72" rx="10" fill="#E8C87A" stroke="#6D2E46" stroke-width="1.5"/>
+  <text x="560" y="64" text-anchor="middle" font-size="20" font-weight="700" fill="#5A2438">☀ Summer / heat</text>
+  <text x="560" y="88" text-anchor="middle" font-size="14" font-style="italic" fill="#6D2E46">the real (hidden) cause</text>
+
+  <!-- causal arrows -->
+  <g stroke="#6D2E46" stroke-width="2.5" fill="#6D2E46">
+    <line x1="492" y1="102" x2="285" y2="298"/><polygon points="285,298 290,283 300,293"/>
+    <line x1="628" y1="102" x2="835" y2="298"/><polygon points="835,298 820,293 830,283"/>
+  </g>
+  <text x="352" y="205" text-anchor="middle" font-size="15" font-weight="700" fill="#6D2E46" transform="rotate(43 352 205)">causes</text>
+  <text x="768" y="205" text-anchor="middle" font-size="15" font-weight="700" fill="#6D2E46" transform="rotate(-43 768 205)">causes</text>
+
+  <!-- effect nodes -->
+  <rect x="120" y="300" width="250" height="72" rx="10" fill="#FFFFFF" stroke="#6D2E46" stroke-width="2"/>
+  <text x="245" y="343" text-anchor="middle" font-size="20" font-weight="700" fill="#6D2E46">🍦 Ice-cream sales</text>
+  <rect x="750" y="300" width="250" height="72" rx="10" fill="#FFFFFF" stroke="#6D2E46" stroke-width="2"/>
+  <text x="875" y="343" text-anchor="middle" font-size="20" font-weight="700" fill="#6D2E46">🏊 Drownings</text>
+
+  <!-- spurious correlation -->
+  <line x1="370" y1="330" x2="750" y2="330" stroke="#A26769" stroke-width="2.5" stroke-dasharray="9 6"/>
+  <text x="560" y="316" text-anchor="middle" font-size="16" font-weight="700" fill="#A26769">strong correlation</text>
+  <text x="560" y="356" text-anchor="middle" font-size="14" font-style="italic" fill="#A26769">great for prediction · neither causes the other</text>
+
+  <!-- intervention callout -->
+  <rect x="120" y="402" width="250" height="46" rx="23" fill="#B85042"/>
+  <text x="245" y="431" text-anchor="middle" font-size="16" font-weight="700" fill="#FAF6F1">intervene: ban 🍦</text>
+  <text x="640" y="431" text-anchor="start" font-size="17" font-weight="700" fill="#B85042">→ drownings unchanged ✗</text>
+</svg>

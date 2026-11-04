@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 520" font-family="'Helvetica Neue', Calibri, sans-serif">
+  <!-- axes -->
+  <line x1="90" y1="60" x2="90" y2="430" stroke="#8A6B70" stroke-width="1.5"/>
+  <line x1="90" y1="430" x2="950" y2="430" stroke="#8A6B70" stroke-width="1.5"/>
+  <text x="40" y="245" text-anchor="middle" font-size="15" fill="#5C5C5C" transform="rotate(-90 40 245)">P(success)</text>
+  <text x="520" y="470" text-anchor="middle" font-size="15" fill="#5C5C5C">task difficulty &#8594;</text>
+  <!-- y gridline labels -->
+  <text x="78" y="86" text-anchor="end" font-size="13" fill="#9A8A8C">100%</text>
+  <text x="78" y="248" text-anchor="end" font-size="13" fill="#9A8A8C">50%</text>
+  <text x="78" y="434" text-anchor="end" font-size="13" fill="#9A8A8C">0%</text>
+
+  <!-- gap shading (what the skill recovers) -->
+  <polygon points="393,104 520,127 647,149 773,212 900,341 900,408 773,408 647,408 520,167 393,149" fill="#E8C87A" fill-opacity="0.30"/>
+
+  <!-- without skill (collapses) -->
+  <polyline points="140,82 267,82 393,149 520,167 647,408 773,408 900,408" fill="none" stroke="#A26769" stroke-width="3" stroke-dasharray="8 5"/>
+  <!-- with skill (holds, stretches ceiling) -->
+  <polyline points="140,82 267,82 393,104 520,127 647,149 773,212 900,341" fill="none" stroke="#6D2E46" stroke-width="3.5"/>
+
+  <!-- point markers -->
+  <g fill="#6D2E46">
+    <circle cx="393" cy="104" r="4"/><circle cx="520" cy="127" r="4"/><circle cx="647" cy="149" r="4"/><circle cx="773" cy="212" r="4"/><circle cx="900" cy="341" r="4"/>
+  </g>
+  <g fill="#A26769">
+    <circle cx="393" cy="149" r="4"/><circle cx="520" cy="167" r="4"/><circle cx="647" cy="408" r="4"/><circle cx="773" cy="408" r="4"/><circle cx="900" cy="408" r="4"/>
+  </g>
+
+  <!-- labels on lines -->
+  <text x="660" y="392" text-anchor="start" font-size="16" font-weight="700" fill="#A26769">without skill</text>
+  <text x="905" y="335" text-anchor="end" font-size="16" font-weight="700" fill="#6D2E46">with skill</text>
+  <text x="640" y="250" text-anchor="middle" font-size="15" font-style="italic" fill="#B07A14">the skill recovers this</text>
+
+  <!-- x ticks -->
+  <g font-size="13" fill="#9A8A8C" text-anchor="middle">
+    <text x="140" y="450">Q1</text><text x="267" y="450">Q2</text><text x="393" y="450">Q3</text><text x="520" y="450">Q4</text><text x="647" y="450">Q5</text><text x="773" y="450">Q6</text><text x="900" y="450">Q7</text>
+  </g>
+</svg>

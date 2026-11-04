@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" font-family="'Helvetica Neue', Calibri, sans-serif">
+  <!-- file tree card -->
+  <rect x="30" y="60" width="440" height="400" rx="12" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+  <text x="58" y="104" font-family="monospace" font-size="20" font-weight="700" fill="#6D2E46">causal-critiquer/</text>
+  <text x="58" y="150" font-family="monospace" font-size="19" fill="#6D2E46">├─ SKILL.md</text>
+  <text x="58" y="200" font-family="monospace" font-size="19" fill="#A26769">├─ checklists/</text>
+  <text x="58" y="234" font-family="monospace" font-size="18" fill="#8A6B70">│   ├─ universal.md</text>
+  <text x="58" y="266" font-family="monospace" font-size="18" fill="#8A6B70">│   ├─ its.md</text>
+  <text x="58" y="298" font-family="monospace" font-size="18" fill="#8A6B70">│   └─ did.md</text>
+  <text x="58" y="360" font-family="monospace" font-size="19" fill="#B07A14">└─ scripts/</text>
+  <text x="58" y="400" font-family="monospace" font-size="18" fill="#B07A14">     └─ run_checks.py</text>
+
+  <!-- connectors -->
+  <g stroke="#A26769" stroke-width="1.5" stroke-dasharray="4 4">
+    <line x1="300" y1="150" x2="560" y2="120"/>
+    <line x1="320" y1="200" x2="560" y2="265"/>
+    <line x1="350" y1="400" x2="560" y2="420"/>
+  </g>
+
+  <!-- Card A: SKILL.md -->
+  <rect x="560" y="70" width="610" height="108" rx="10" fill="#FFFFFF" stroke="#6D2E46" stroke-width="2"/>
+  <text x="584" y="104" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#6D2E46">SKILL.md — the brain</text>
+  <text x="584" y="133" font-size="16" fill="#2A2A2A"><tspan font-weight="700">description</tspan> = how the agent finds it (what + when)</text>
+  <text x="584" y="158" font-size="16" fill="#2A2A2A">+ lean body: the 3-layer workflow &amp; the output format</text>
+
+  <!-- Card B: checklists -->
+  <rect x="560" y="200" width="610" height="150" rx="10" fill="#FFFFFF" stroke="#A26769" stroke-width="2"/>
+  <text x="584" y="234" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#6D2E46">checklists/ — progressive disclosure</text>
+  <text x="584" y="263" font-size="16" fill="#2A2A2A">design-routed reference: universal · ITS · DiD · …</text>
+  <text x="584" y="288" font-size="16" fill="#2A2A2A">loaded <em>only</em> when the design matches —</text>
+  <text x="584" y="313" font-size="16" fill="#2A2A2A">zero token cost until then. Add `rdd.md`, `iv.md`, … as needed.</text>
+
+  <!-- Card C: scripts -->
+  <rect x="560" y="372" width="610" height="106" rx="10" fill="#FFFFFF" stroke="#B07A14" stroke-width="2"/>
+  <text x="584" y="406" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#6D2E46">scripts/run_checks.py — the hard layer</text>
+  <text x="584" y="435" font-size="16" fill="#2A2A2A">placebo-in-time + R-hat / divergences → pass/fail JSON</text>
+  <text x="584" y="460" font-size="16" fill="#2A2A2A">deterministic — no opinion to sweet-talk</text>
+
+  <!-- bottom banner -->
+  <rect x="120" y="502" width="960" height="46" rx="23" fill="#6D2E46"/>
+  <text x="600" y="531" text-anchor="middle" font-size="17" fill="#FAF6F1">Invoked as a <tspan font-weight="700">fresh sub-agent</tspan>: context = artifact + spec + check JSON — nothing else</text>
+</svg>

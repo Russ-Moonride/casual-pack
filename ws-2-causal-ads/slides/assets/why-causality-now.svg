@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="'Helvetica Neue', Calibri, sans-serif">
+  <!-- top: Agent <-> Causal model -->
+  <rect x="120" y="56" width="300" height="124" rx="12" fill="#6D2E46"/>
+  <text x="270" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#FAF6F1">Agent</text>
+  <text x="270" y="142" text-anchor="middle" font-size="15" fill="#E6D5C9">LLM + tools</text>
+
+  <rect x="780" y="56" width="300" height="124" rx="12" fill="#E8C87A" stroke="#6D2E46" stroke-width="2"/>
+  <text x="930" y="112" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="700" fill="#5A2438">Causal model</text>
+  <text x="930" y="142" text-anchor="middle" font-size="15" fill="#6D2E46">DAG · structural · CausalPy</text>
+
+  <!-- arrow A: causal -> agent (grounding) -->
+  <line x1="775" y1="96" x2="430" y2="96" stroke="#6D2E46" stroke-width="2.5"/>
+  <polygon points="430,96 442,90 442,102" fill="#6D2E46"/>
+  <text x="602" y="84" text-anchor="middle" font-size="15" font-weight="700" fill="#6D2E46">grounding — the model does the reasoning</text>
+
+  <!-- arrow B: agent -> causal (accessibility) -->
+  <line x1="425" y1="150" x2="770" y2="150" stroke="#B07A14" stroke-width="2.5"/>
+  <polygon points="770,150 758,144 758,156" fill="#B07A14"/>
+  <text x="600" y="172" text-anchor="middle" font-size="15" font-weight="700" fill="#B07A14">accessibility — the agent builds &amp; runs it</text>
+
+  <!-- contrast strip -->
+  <rect x="120" y="270" width="440" height="160" rx="12" fill="#EDE0E2" stroke="#A26769" stroke-width="2"/>
+  <text x="340" y="308" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#A26769">Blackbox ML</text>
+  <text x="340" y="344" text-anchor="middle" font-size="16" fill="#4A4A4A">the agent can run it — but no one</text>
+  <text x="340" y="368" text-anchor="middle" font-size="16" fill="#4A4A4A">can look inside</text>
+  <text x="340" y="404" text-anchor="middle" font-size="16" font-weight="700" fill="#B85042">✗ no “what if”, no audit, no explanation</text>
+
+  <text x="600" y="358" text-anchor="middle" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#6D2E46">vs</text>
+
+  <rect x="640" y="270" width="440" height="160" rx="12" fill="#F6E9D9" stroke="#6D2E46" stroke-width="3"/>
+  <text x="860" y="308" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#6D2E46">Causal / structural</text>
+  <text x="860" y="344" text-anchor="middle" font-size="16" fill="#4A4A4A">human + agent both read it,</text>
+  <text x="860" y="368" text-anchor="middle" font-size="16" fill="#4A4A4A">intervene on it, explain it</text>
+  <text x="860" y="404" text-anchor="middle" font-size="16" font-weight="700" fill="#4A7A4A">✓ a shared object you can reason over</text>
+
+  <!-- takeaway -->
+  <text x="600" y="478" text-anchor="middle" font-size="18" font-style="italic" fill="#6D2E46">Transparent models were always better — agents just made them cheap.</text>
+</svg>

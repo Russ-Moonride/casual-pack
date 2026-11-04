@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 446" font-family="'Helvetica Neue', Calibri, sans-serif">
+  <!-- top arrow: less oversight -->
+  <line x1="50" y1="60" x2="1150" y2="60" stroke="#8A6B70" stroke-width="2"/>
+  <polygon points="1150,60 1136,53 1136,67" fill="#8A6B70"/>
+  <text x="600" y="42" text-anchor="middle" font-size="16" font-weight="700" fill="#6D2E46">you hand over more · you oversee less →</text>
+
+  <!-- 6 level cards -->
+  <g>
+    <rect x="45"  y="86" width="175" height="190" rx="10" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+    <rect x="232" y="86" width="175" height="190" rx="10" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+    <rect x="419" y="86" width="175" height="190" rx="10" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+    <rect x="606" y="86" width="175" height="190" rx="10" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+    <rect x="793" y="86" width="175" height="190" rx="10" fill="#FBF8F4" stroke="#6D2E46" stroke-width="2"/>
+    <rect x="980" y="86" width="175" height="190" rx="10" fill="#FBF8F4" stroke="#6D2E46" stroke-width="2"/>
+  </g>
+
+  <!-- L0 -->
+  <rect x="73" y="104" width="56" height="34" rx="8" fill="#8A6B70"/><text x="101" y="128" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#FAF6F1">L0</text>
+  <text x="132" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#6D2E46">manual</text>
+  <text x="132" y="223" text-anchor="middle" font-size="13" fill="#5C5C5C">no agent</text>
+  <!-- L1 -->
+  <rect x="260" y="104" width="56" height="34" rx="8" fill="#E8C87A"/><text x="288" y="128" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#5A2438">L1</text>
+  <text x="319" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#6D2E46">you drive</text>
+  <text x="319" y="223" text-anchor="middle" font-size="13" fill="#5C5C5C">agent assists</text>
+  <!-- L2 -->
+  <rect x="447" y="104" width="56" height="34" rx="8" fill="#E8C87A"/><text x="475" y="128" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#5A2438">L2</text>
+  <text x="506" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#6D2E46">you + agent</text>
+  <text x="506" y="223" text-anchor="middle" font-size="13" fill="#5C5C5C">hands-on, together</text>
+  <!-- L3 -->
+  <rect x="634" y="104" width="56" height="34" rx="8" fill="#E8C87A"/><text x="662" y="128" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#5A2438">L3</text>
+  <text x="693" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#6D2E46">you supervise</text>
+  <text x="693" y="223" text-anchor="middle" font-size="13" fill="#5C5C5C">it plans, you check</text>
+  <!-- L4 -->
+  <rect x="821" y="104" width="56" height="34" rx="8" fill="#6D2E46"/><text x="849" y="128" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#FAF6F1">L4</text>
+  <text x="880" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#6D2E46">you approve</text>
+  <text x="880" y="223" text-anchor="middle" font-size="13" fill="#5C5C5C">only on blockers</text>
+  <!-- L5 -->
+  <rect x="1008" y="104" width="56" height="34" rx="8" fill="#6D2E46"/><text x="1036" y="128" text-anchor="middle" font-family="Georgia,serif" font-size="18" font-weight="700" fill="#FAF6F1">L5</text>
+  <text x="1067" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="17" font-weight="700" fill="#6D2E46">hands-off</text>
+  <text x="1067" y="223" text-anchor="middle" font-size="13" fill="#5C5C5C">it runs alone</text>
+
+  <!-- bands -->
+  <rect x="232" y="298" width="549" height="42" rx="10" fill="#E8C87A"/>
+  <text x="506" y="325" text-anchor="middle" font-size="16" font-weight="700" fill="#5A2438">you are here — this session</text>
+  <rect x="793" y="298" width="362" height="42" rx="10" fill="#6D2E46"/>
+  <text x="974" y="325" text-anchor="middle" font-size="16" font-weight="700" fill="#FAF6F1">the frontier — Session 3 · Decision-Lab</text>
+
+  <!-- reframe caption -->
+  <text x="600" y="378" text-anchor="middle" font-size="15" font-style="italic" fill="#6D2E46">The model can already <tspan font-weight="700">recover</tspan> on its own — the level is how much you let it run <tspan font-style="italic">without you</tspan>.</text>
+  <!-- external attribution -->
+  <text x="600" y="404" text-anchor="middle" font-size="12" fill="#9A8A8C">not our framework — SAE self-driving levels, adapted for agents (Feng et al. 2025 · "A Survey of Data Agents")</text>
+</svg>

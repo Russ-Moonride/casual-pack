@@ -1,0 +1,109 @@
+================================================================================
+MADS Session 02 — FRESH RUN LOG (intervention analysis with CausalPy)
+================================================================================
+Purpose: Do a fresh, blind quasi-experimental analysis of the intervention
+dataset WITHOUT consulting the existing causal skills (causalpy-library,
+causal-critiquer) or the prior notebooks. Log EVERYTHING, especially mistakes,
+so the second run (skill-driven) can be better. Append-only.
+
+Tooling: causalpy 0.8.1, marimo 0.23.4, pandas 3.0.2 (project .venv)
+Working in: marimo-pair (live kernel via marimo-pair skill scripts).
+Causal skills deliberately NOT loaded.
+
+--------------------------------------------------------------------------------
+[SETUP] Dataset discovery
+--------------------------------------------------------------------------------
+- File: data/daily_aggregates_intervention.csv (913 daily rows)
+- Date range: 2024-04-01 .. 2026-09-30
+- Columns used for the analysis: date, subscriber_pool, signups, conversions,
+  conv_rate, post
+- `post` flips 0 -> 1 at 2026-04-01  => treatment_time = 2026-04-01
+  (~730 pre-period days, ~183 post-period days)
+- Outcome = conv_rate (new subscriptions / users who could still subscribe),
+  treatment indicator = post.
+
+--------------------------------------------------------------------------------
+[RUN 1] First ITS attempt with CausalPy
+--------------------------------------------------------------------------------
+API notes (no skill consulted, guessed from memory; turned out correct for 0.8.1):
+- cp.InterruptedTimeSeries(data, treatment_time, formula=..., model=...)
+- model = cp.pymc_models.LinearRegression(sample_kwargs={...})
+- data needs a datetime index; treatment_time = pd.Timestamp matching the index.
+- CausalPy does NOT auto-create a time trend; you must add a `t` column yourself
+  and reference it in the formula. (Easy to forget.)
+- Result API: result.score (pre-period R2), result.effect_summary(),
+  result.post_impact, result.post_impact_cumulative, result.plot(), result.summary().
+- screenshot() in marimo code_mode needs `await` AND playwright installed
+  (not installed here) -> fall back to numeric inspection.
+
+MISTAKE #1 (the big one): interpreted the effect without checking pre-period fit.
+- Model: conv_rate ~ 1 + t  (intercept + linear time only)
+- result.score: unit_0_r2 = 0.013  <-- pre-period fit is essentially ZERO.
+- Yet effect_summary() confidently reported:
+    average effect -0.00021, cumulative -0.0385,
+    relative -11.75% (95% HDI [-20.26%, -3.14%]), p(decrease)=0.992,
+    "HDI does not include zero".
+- This is the trap: a misspecified model with R2~0.01 STILL produces a
+  narrow, 'significant', wrong-signed effect. The counterfactual projection is
+  meaningless because the pre-period model explains ~1% of variance.
+- LESSON: ALWAYS check result.score (pre-period fit) BEFORE reading the effect.
+  R2 ~ 0.01 => stop, fix the model, do not interpret.
+
+Suspected causes of the bad fit:
+  (a) noisy early period: subscriber_pool tiny (42, 81, ...) => conv_rate spikes
+      (0.024 then mostly 0) dominate variance.
+  (b) missing weekly/seasonal structure.
+  (c) conv_rate = conversions/subscriber_pool with subscriber_pool growing nonlinearly =>
+      a linear-in-t trend on conv_rate is the wrong functional form.
+Next: diagnose (a)-(c), then refit.
+
+--------------------------------------------------------------------------------
+[RUN 2] Diagnose + Attempt 2 (trim early period + day-of-week)
+--------------------------------------------------------------------------------
+Diagnostics on pre-period:
+- conv_rate std first 60 days = 0.00312 vs days 60-730 = 0.00042 (~7x).
+  Tiny subscriber_pool early => huge rate variance dominating the fit.
+- corr(conv_rate, t): 0.108 full pre, 0.33 after dropping first 3 months.
+- day-of-week: Monday higher (0.00176) vs ~0.0014 others (mild).
+- corr(conversions, subscriber_pool) = 0.895 (conversions driven by pool size).
+
+Attempt 2: data from 2024-07-01, formula "conv_rate ~ 1 + t + C(dow)".
+- pre-period R2 improved 0.013 -> 0.123 (still weak).
+- BUT effect got MORE negative: -15.8% (HDI [-19.9%, -2.9%] ... actually
+  table mean -0.00029, rel -15.77%), p_gt_0 = 0.0.
+- A "better-fitting" model giving a stronger, confident NEGATIVE effect is a
+  RED FLAG, not progress.
+
+MISTAKE #2 (outcome framing):
+- conv_rate is new subscriptions divided by users who could still subscribe.
+  That denominator changes over time: new signups enter; users who subscribe
+  leave.
+- More fundamentally, the outcome itself may be affected by subscriber-pool
+  composition (see INSIGHT).
+
+KEY INSIGHT — subscriber-pool drift (the tempting trap):
+- subscriber_pool = users who signed up but have not subscribed yet.
+- Over time the pool may become enriched with users who are harder to convert,
+  so the aggregate conv_rate can drift even without a price change.
+- Evidence: signups flat across treatment (~44/day); monthly conversions
+  Dec882 Jan918 Feb924 Mar1126(spike) Apr883 ... Sep974. Post conversions sit on
+  the Dec-Feb baseline; the apparent "drop" is relative to a March-2026 spike.
+  subscriber_pool grows 19.1k->21.0k post while conversions ~flat => conv_rate could
+  fall mechanically.
+- => The pre-period conv_rate trend may be a COMPOSITION ARTIFACT, not a structural
+  relationship safe to extrapolate. This violates the ITS "stable pre/post
+  relationship" assumption. The naive negative effect is largely this artifact.
+
+LESSONS for the skill (run 2):
+  1. Before any ITS: check result.score (pre R2). R2 ~ 0.01 => do not interpret.
+  2. Identify the outcome's data-generating process. A ratio with a moving,
+     changing denominator (here users who can still subscribe) is NOT a clean ITS
+     outcome. Ask "is the pre-trend structural or a composition artifact?"
+  3. Match model family to outcome: counts/rates -> Poisson/Binomial w/ exposure,
+     not Gaussian on the raw rate.
+  4. A better in-sample fit that strengthens a surprising/confident effect is a
+     prompt to investigate confounding, not to celebrate.
+  5. Plot raw conversions AND subscriber_pool separately around the boundary before
+     trusting a ratio outcome; look for pre-treatment spikes/anticipation.
+Next decision (ask Thomas): do not ship this conclusion yet. Hand the analysis
+to an independent reviewer that can run placebo-in-time and specification checks.

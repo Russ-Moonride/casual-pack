@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" font-family="'Helvetica Neue', Calibri, sans-serif">
+  <!-- input label -->
+  <text x="30" y="46" font-size="17" font-style="italic" fill="#5C5C5C">your causal analysis &#8594;</text>
+
+  <!-- box 1: deterministic checks -->
+  <rect x="20" y="70" width="270" height="330" rx="12" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+  <rect x="20" y="70" width="270" height="48" rx="12" fill="#E8C87A"/>
+  <text x="44" y="101" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#5A2438">1 · Hard checks</text>
+  <text x="40" y="158" font-size="16" fill="#2A2A2A">• placebo-in-time</text>
+  <text x="40" y="190" font-size="16" fill="#2A2A2A">• residual diagnostics</text>
+  <text x="40" y="222" font-size="16" fill="#2A2A2A">• R-hat / divergences</text>
+  <text x="40" y="254" font-size="16" fill="#2A2A2A">• prior sensitivity</text>
+  <text x="40" y="360" font-size="14" font-style="italic" fill="#8A6B70">a script — pass/fail,</text>
+  <text x="40" y="380" font-size="14" font-style="italic" fill="#8A6B70">no opinion</text>
+
+  <!-- box 2: judgment rubric -->
+  <rect x="320" y="70" width="270" height="330" rx="12" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+  <rect x="320" y="70" width="270" height="48" rx="12" fill="#A26769"/>
+  <text x="344" y="101" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#FAF6F1">2 · Judgment</text>
+  <text x="340" y="158" font-size="16" fill="#2A2A2A">• estimand named?</text>
+  <text x="340" y="190" font-size="16" fill="#2A2A2A">• assumptions defended?</text>
+  <text x="340" y="222" font-size="16" fill="#2A2A2A">• claim = estimate?</text>
+  <text x="340" y="360" font-size="14" font-style="italic" fill="#8A6B70">a rubric — not</text>
+  <text x="340" y="380" font-size="14" font-style="italic" fill="#8A6B70">&#8220;is it good?&#8221;</text>
+
+  <!-- box 3: fresh-context refuter -->
+  <rect x="620" y="70" width="270" height="330" rx="12" fill="#FBF8F4" stroke="#6D2E46" stroke-width="2.5"/>
+  <rect x="620" y="70" width="270" height="48" rx="12" fill="#6D2E46"/>
+  <text x="644" y="101" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#FAF6F1">3 · Refute it</text>
+  <text x="640" y="158" font-size="16" fill="#2A2A2A">&#8220;would the pre-trend</text>
+  <text x="640" y="180" font-size="16" fill="#2A2A2A">have continued anyway?&#8221;</text>
+  <text x="640" y="226" font-size="16" fill="#2A2A2A">trend misspec · anticipation</text>
+  <text x="640" y="252" font-size="16" fill="#2A2A2A">· a co-occurring change</text>
+  <text x="640" y="360" font-size="14" font-style="italic" fill="#8A6B70">a fresh agent —</text>
+  <text x="640" y="380" font-size="14" font-style="italic" fill="#8A6B70">never self-review</text>
+
+  <!-- arrows -->
+  <g stroke="#6D2E46" stroke-width="2.5" fill="#6D2E46">
+    <line x1="292" y1="235" x2="316" y2="235"/><polygon points="316,235 306,230 306,240"/>
+    <line x1="592" y1="235" x2="616" y2="235"/><polygon points="616,235 606,230 606,240"/>
+    <line x1="892" y1="235" x2="916" y2="235"/><polygon points="916,235 906,230 906,240"/>
+  </g>
+
+  <!-- verdict -->
+  <rect x="920" y="120" width="250" height="230" rx="14" fill="#6D2E46"/>
+  <text x="1045" y="165" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#FAF6F1">Verdict</text>
+  <text x="1045" y="212" text-anchor="middle" font-size="18" fill="#9FCF9F">Approve</text>
+  <text x="1045" y="246" text-anchor="middle" font-size="18" fill="#E8C87A">Revise</text>
+  <text x="1045" y="280" text-anchor="middle" font-size="18" fill="#E59A8F">Reject</text>
+  <text x="1045" y="322" text-anchor="middle" font-size="14" font-style="italic" fill="#E6D5C9">+ fixes by severity</text>
+
+  <!-- bottom note -->
+  <text x="600" y="470" text-anchor="middle" font-size="17" font-style="italic" fill="#6D2E46">Self-review degrades quality &#8212; hard checks + a fresh reviewer don't.</text>
+</svg>

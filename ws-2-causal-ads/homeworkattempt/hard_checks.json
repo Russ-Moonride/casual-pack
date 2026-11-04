@@ -1,0 +1,75 @@
+[
+  {
+    "check": "convergence:r_hat",
+    "passed": null,
+    "value": null,
+    "threshold": null,
+    "evidence": "OLS/HC3 \u2014 no MCMC"
+  },
+  {
+    "check": "convergence:divergences",
+    "passed": null,
+    "value": null,
+    "threshold": null,
+    "evidence": "OLS \u2014 not applicable"
+  },
+  {
+    "check": "convergence:ess_bulk",
+    "passed": null,
+    "value": null,
+    "threshold": null,
+    "evidence": "OLS \u2014 not applicable"
+  },
+  {
+    "check": "prior_sensitivity",
+    "passed": null,
+    "value": null,
+    "threshold": null,
+    "evidence": "Frequentist OLS \u2014 no prior; SE robustness substituted below"
+  },
+  {
+    "check": "placebo_in_time@-275d",
+    "passed": false,
+    "value": {
+      "att": 0.001813,
+      "ci_95": [
+        0.000181,
+        0.003445
+      ]
+    },
+    "threshold": "95% CI \u220b 0",
+    "evidence": "Fake cutoff 2025-07-01: ATT=0.00181, CI=[0.00018,0.00344]"
+  },
+  {
+    "check": "se_sensitivity:hc3_vs_clustered",
+    "passed": true,
+    "value": {
+      "att_hc3": 0.008024,
+      "ci_hc3": [
+        0.006328,
+        0.009719
+      ],
+      "att_clustered": 0.008024,
+      "ci_clustered": [
+        0.007604,
+        0.008444
+      ]
+    },
+    "threshold": "both CIs > 0",
+    "evidence": "HC3=[0.00633,0.00972]  Clustered=[0.00760,0.00844]"
+  },
+  {
+    "check": "functional_form:log_vs_levels",
+    "passed": true,
+    "value": {
+      "att_log": 0.081162,
+      "approx_pct_lift": 8.12,
+      "ci_log": [
+        0.063189,
+        0.099135
+      ]
+    },
+    "threshold": "CI in log-space > 0",
+    "evidence": "Log-outcome: ATT=0.08116 (~8.1% lift), CI=[0.06319,0.09914]"
+  }
+]

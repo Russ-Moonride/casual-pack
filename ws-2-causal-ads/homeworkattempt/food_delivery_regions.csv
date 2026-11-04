@@ -1,0 +1,7 @@
+region,region_label,is_treated_region,market_type
+north_metro,North Metro,1,dense urban
+south_metro,South Metro,0,dense urban
+east_bay,East Bay,0,dense urban
+west_hills,West Hills,0,suburban
+lake_county,Lake County,0,suburban
+river_county,River County,0,exurban

@@ -1,0 +1,10 @@
+[project]
+name = "mads-session-02-participant-materials"
+version = "0.1.0"
+requires-python = ">=3.13"
+dependencies = [
+    "causalpy>=0.8.1",
+    "marimo>=0.23.4",
+    "pandas>=3.0.2",
+    "seaborn>=0.13.2",
+]

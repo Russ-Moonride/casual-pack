@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 540" font-family="'Helvetica Neue', Calibri, sans-serif">
+  <!-- LEFT: design family -->
+  <rect x="24" y="30" width="540" height="486" rx="12" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+  <text x="48" y="68" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#6D2E46">Designs it covers — one API</text>
+
+  <!-- chips: 2 cols x 5 rows -->
+  <!-- col x: 48 / 300 ; width 232 h 50 ; rows y 92,154,216,278,340 -->
+  <g font-size="15" font-weight="600">
+    <!-- ITS highlighted -->
+    <rect x="48"  y="92"  width="232" height="50" rx="8" fill="#E8C87A" stroke="#6D2E46" stroke-width="2"/>
+    <text x="164" y="123" text-anchor="middle" fill="#5A2438">★ Interrupted Time Series</text>
+    <rect x="300" y="92"  width="232" height="50" rx="8" fill="#FFFFFF" stroke="#A26769"/>
+    <text x="416" y="123" text-anchor="middle" fill="#2A2A2A">Difference-in-Differences</text>
+
+    <rect x="48"  y="154" width="232" height="50" rx="8" fill="#FFFFFF" stroke="#A26769"/>
+    <text x="164" y="185" text-anchor="middle" fill="#2A2A2A">Synthetic Control</text>
+    <rect x="300" y="154" width="232" height="50" rx="8" fill="#FFFFFF" stroke="#A26769"/>
+    <text x="416" y="185" text-anchor="middle" fill="#2A2A2A">Regression Discontinuity</text>
+
+    <rect x="48"  y="216" width="232" height="50" rx="8" fill="#FFFFFF" stroke="#A26769"/>
+    <text x="164" y="247" text-anchor="middle" fill="#2A2A2A">Regression Kink</text>
+    <rect x="300" y="216" width="232" height="50" rx="8" fill="#FFFFFF" stroke="#A26769"/>
+    <text x="416" y="247" text-anchor="middle" fill="#2A2A2A">Instrumental Variable</text>
+
+    <rect x="48"  y="278" width="232" height="50" rx="8" fill="#FFFFFF" stroke="#A26769"/>
+    <text x="164" y="309" text-anchor="middle" fill="#2A2A2A">Inverse Propensity</text>
+    <rect x="300" y="278" width="232" height="50" rx="8" fill="#FFFFFF" stroke="#A26769"/>
+    <text x="416" y="309" text-anchor="middle" fill="#2A2A2A">Panel Regression</text>
+
+    <rect x="48"  y="340" width="232" height="50" rx="8" fill="#FFFFFF" stroke="#A26769"/>
+    <text x="164" y="371" text-anchor="middle" fill="#2A2A2A">Pre / Post NEGD</text>
+    <rect x="300" y="340" width="232" height="50" rx="8" fill="#FFFFFF" stroke="#A26769"/>
+    <text x="416" y="371" text-anchor="middle" fill="#2A2A2A">Staggered DiD</text>
+  </g>
+  <text x="294" y="430" text-anchor="middle" font-size="15" font-style="italic" fill="#8A6B70">Encode the design as a formula; CausalPy builds the counterfactual + effect.</text>
+  <text x="294" y="486" text-anchor="middle" font-size="14" fill="#A26769">open-source · PyMC Labs · built on PyMC + sklearn</text>
+
+  <!-- RIGHT TOP: backends -->
+  <rect x="590" y="30" width="586" height="200" rx="12" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+  <text x="614" y="68" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#6D2E46">Two backends — one-line swap</text>
+  <rect x="614" y="92" width="244" height="92" rx="9" fill="#FFFFFF" stroke="#6D2E46" stroke-width="1.5"/>
+  <text x="736" y="128" text-anchor="middle" font-size="18" font-weight="700" fill="#6D2E46">sklearn</text>
+  <text x="736" y="156" text-anchor="middle" font-size="14" fill="#4A4A4A">fast point estimate</text>
+  <rect x="908" y="92" width="244" height="92" rx="9" fill="#FFFFFF" stroke="#6D2E46" stroke-width="1.5"/>
+  <text x="1030" y="128" text-anchor="middle" font-size="18" font-weight="700" fill="#6D2E46">PyMC</text>
+  <text x="1030" y="156" text-anchor="middle" font-size="14" fill="#4A4A4A">full posterior · uncertainty</text>
+  <!-- swap arrows -->
+  <g stroke="#B07A14" stroke-width="2.5" fill="#B07A14">
+    <line x1="864" y1="128" x2="900" y2="128"/><polygon points="900,128 890,123 890,133"/>
+    <line x1="902" y1="150" x2="866" y2="150"/><polygon points="866,150 876,145 876,155"/>
+  </g>
+  <text x="883" y="210" text-anchor="middle" font-size="14" font-style="italic" fill="#B07A14">change model=… — nothing else</text>
+
+  <!-- RIGHT BOTTOM: what you get -->
+  <rect x="590" y="250" width="586" height="266" rx="12" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+  <text x="614" y="288" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#6D2E46">What you get</text>
+  <g font-size="16" fill="#2A2A2A">
+    <text x="616" y="328">• the counterfactual + the effect estimate</text>
+    <text x="616" y="364">• a posterior &amp; credible intervals (PyMC)</text>
+    <text x="616" y="400">• built-in plots of fit, counterfactual, impact</text>
+    <text x="616" y="436">• placebo-in-time &amp; sensitivity checks</text>
+    <text x="616" y="472">• a small, consistent API across every design</text>
+  </g>
+</svg>

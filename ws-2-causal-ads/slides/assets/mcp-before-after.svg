@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600" font-family="'Helvetica Neue', Calibri, sans-serif">
+  <!-- ============ panels ============ -->
+  <rect x="20" y="20" width="555" height="560" rx="14" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+  <rect x="625" y="20" width="555" height="560" rx="14" fill="#6D2E46"/>
+
+  <!-- ============ titles ============ -->
+  <text x="297" y="64" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#6D2E46">Before MCP</text>
+  <text x="902" y="64" text-anchor="middle" font-family="Georgia, serif" font-size="30" font-weight="700" fill="#FAF6F1">After MCP</text>
+  <text x="297" y="92" text-anchor="middle" font-size="16" font-style="italic" fill="#9A7A80">a bespoke integration per person, per tool</text>
+  <text x="902" y="92" text-anchor="middle" font-size="16" font-style="italic" fill="#E6D5C9">one server &#8212; connect once</text>
+
+  <!-- ============ LEFT: N x M tangle (lines under chips) ============ -->
+  <g stroke="#A26769" stroke-width="2" stroke-opacity="0.45">
+    <line x1="138" y1="172" x2="138" y2="403"/>
+    <line x1="138" y1="172" x2="297" y2="403"/>
+    <line x1="138" y1="172" x2="456" y2="403"/>
+    <line x1="297" y1="172" x2="138" y2="403"/>
+    <line x1="297" y1="172" x2="297" y2="403"/>
+    <line x1="297" y1="172" x2="456" y2="403"/>
+    <line x1="456" y1="172" x2="138" y2="403"/>
+    <line x1="456" y1="172" x2="297" y2="403"/>
+    <line x1="456" y1="172" x2="456" y2="403"/>
+  </g>
+
+  <!-- ============ RIGHT: N + M via hub ============ -->
+  <g stroke="#E8C87A" stroke-width="3">
+    <line x1="743" y1="172" x2="902" y2="240"/>
+    <line x1="902" y1="172" x2="902" y2="240"/>
+    <line x1="1061" y1="172" x2="902" y2="240"/>
+    <line x1="902" y1="302" x2="743" y2="403"/>
+    <line x1="902" y1="302" x2="902" y2="403"/>
+    <line x1="902" y1="302" x2="1061" y2="403"/>
+  </g>
+
+  <!-- ============ agent chips (top row, both panels) ============ -->
+  <!-- left agents -->
+  <g>
+    <rect x="74"  y="124" width="128" height="48" rx="9" fill="#FFFFFF" stroke="#6D2E46" stroke-width="2"/>
+    <text x="138" y="154" text-anchor="middle" font-size="18" font-weight="600" fill="#6D2E46">you</text>
+    <rect x="233" y="124" width="128" height="48" rx="9" fill="#FFFFFF" stroke="#6D2E46" stroke-width="2"/>
+    <text x="297" y="154" text-anchor="middle" font-size="18" font-weight="600" fill="#6D2E46">teammate</text>
+    <rect x="392" y="124" width="128" height="48" rx="9" fill="#FFFFFF" stroke="#6D2E46" stroke-width="2"/>
+    <text x="456" y="154" text-anchor="middle" font-size="18" font-weight="600" fill="#6D2E46">student</text>
+  </g>
+  <!-- right agents -->
+  <g>
+    <rect x="679"  y="124" width="128" height="48" rx="9" fill="#FAF6F1" stroke="#E8C87A" stroke-width="2"/>
+    <text x="743"  y="154" text-anchor="middle" font-size="18" font-weight="600" fill="#6D2E46">you</text>
+    <rect x="838"  y="124" width="128" height="48" rx="9" fill="#FAF6F1" stroke="#E8C87A" stroke-width="2"/>
+    <text x="902"  y="154" text-anchor="middle" font-size="18" font-weight="600" fill="#6D2E46">teammate</text>
+    <rect x="997"  y="124" width="128" height="48" rx="9" fill="#FAF6F1" stroke="#E8C87A" stroke-width="2"/>
+    <text x="1061" y="154" text-anchor="middle" font-size="18" font-weight="600" fill="#6D2E46">student</text>
+  </g>
+
+  <!-- ============ MCP hub (right, middle) ============ -->
+  <rect x="797" y="240" width="210" height="62" rx="11" fill="#E8C87A" stroke="#FAF6F1" stroke-width="2"/>
+  <text x="902" y="267" text-anchor="middle" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#5A2438">MCP server</text>
+  <text x="902" y="289" text-anchor="middle" font-size="14" fill="#6D2E46">one unified interface (Daimon)</text>
+
+  <!-- ============ service chips (bottom row, both panels) ============ -->
+  <!-- left services -->
+  <g>
+    <rect x="74"  y="403" width="128" height="48" rx="9" fill="#FFFFFF" stroke="#A26769" stroke-width="2"/>
+    <text x="138" y="433" text-anchor="middle" font-size="17" font-weight="600" fill="#2A2A2A">Discord</text>
+    <rect x="233" y="403" width="128" height="48" rx="9" fill="#FFFFFF" stroke="#A26769" stroke-width="2"/>
+    <text x="297" y="433" text-anchor="middle" font-size="17" font-weight="600" fill="#2A2A2A">Notion</text>
+    <rect x="392" y="403" width="128" height="48" rx="9" fill="#FFFFFF" stroke="#A26769" stroke-width="2"/>
+    <text x="456" y="433" text-anchor="middle" font-size="17" font-weight="600" fill="#2A2A2A">GitHub</text>
+  </g>
+  <!-- right services -->
+  <g>
+    <rect x="679"  y="403" width="128" height="48" rx="9" fill="#FAF6F1" stroke="#A26769" stroke-width="2"/>
+    <text x="743"  y="433" text-anchor="middle" font-size="17" font-weight="600" fill="#2A2A2A">Discord</text>
+    <rect x="838"  y="403" width="128" height="48" rx="9" fill="#FAF6F1" stroke="#A26769" stroke-width="2"/>
+    <text x="902"  y="433" text-anchor="middle" font-size="17" font-weight="600" fill="#2A2A2A">Notion</text>
+    <rect x="997"  y="403" width="128" height="48" rx="9" fill="#FAF6F1" stroke="#A26769" stroke-width="2"/>
+    <text x="1061" y="433" text-anchor="middle" font-size="17" font-weight="600" fill="#2A2A2A">GitHub</text>
+  </g>
+
+  <!-- ============ count callouts ============ -->
+  <rect x="222" y="277" width="150" height="34" rx="8" fill="#FFFFFF" stroke="#B85042" stroke-width="2"/>
+  <text x="297" y="300" text-anchor="middle" font-size="17" font-weight="700" fill="#B85042">3 &#215; 3 = 9</text>
+
+  <!-- ============ bottom captions ============ -->
+  <text x="297" y="500" text-anchor="middle" font-size="17" font-style="italic" fill="#6D2E46">Everyone wires up every tool &#8212; separately.</text>
+  <text x="297" y="526" text-anchor="middle" font-size="17" font-weight="700" fill="#B85042">N &#215; M integrations</text>
+  <text x="902" y="500" text-anchor="middle" font-size="17" font-style="italic" fill="#F3E7DC">One server. One config line each.</text>
+  <text x="902" y="526" text-anchor="middle" font-size="17" font-weight="700" fill="#E8C87A">N + M &#8212; and it scales</text>
+</svg>

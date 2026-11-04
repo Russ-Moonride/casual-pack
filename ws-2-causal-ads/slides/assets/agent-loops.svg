@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 470" font-family="'Helvetica Neue', Calibri, sans-serif">
+  <!-- 3 stage cards -->
+  <!-- card 1 -->
+  <rect x="40" y="34" width="350" height="262" rx="12" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+  <circle cx="80" cy="78" r="22" fill="#6D2E46"/><text x="80" y="86" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#FAF6F1">1</text>
+  <text x="114" y="85" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#6D2E46">Start small</text>
+  <text x="66" y="135" font-size="16" fill="#2A2A2A">human in the loop —</text>
+  <text x="66" y="158" font-size="16" fill="#2A2A2A">check every step</text>
+  <!-- card 2 -->
+  <rect x="425" y="34" width="350" height="262" rx="12" fill="#FBF8F4" stroke="#A26769" stroke-width="2"/>
+  <circle cx="465" cy="78" r="22" fill="#6D2E46"/><text x="465" y="86" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#FAF6F1">2</text>
+  <text x="499" y="85" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#6D2E46">Build it up</text>
+  <text x="451" y="135" font-size="16" fill="#2A2A2A">extract the kinks into skills</text>
+  <text x="451" y="158" font-size="16" fill="#2A2A2A">· add verification gates</text>
+  <!-- card 3 (highlighted) -->
+  <rect x="810" y="34" width="350" height="262" rx="12" fill="#F6E9D9" stroke="#6D2E46" stroke-width="3"/>
+  <circle cx="850" cy="78" r="22" fill="#6D2E46"/><text x="850" y="86" text-anchor="middle" font-family="Georgia, serif" font-size="20" font-weight="700" fill="#FAF6F1">3</text>
+  <text x="884" y="85" font-family="Georgia, serif" font-size="19" font-weight="700" fill="#6D2E46">Let go</text>
+  <text x="836" y="135" font-size="16" fill="#2A2A2A">supervise the spec,</text>
+  <text x="836" y="158" font-size="16" fill="#2A2A2A">not every keystroke</text>
+
+  <!-- mini human/agent bars per card -->
+  <!-- card1: you big, agent small -->
+  <text x="66" y="205" font-size="13" fill="#8A6B70">you</text><rect x="120" y="194" width="190" height="15" rx="3" fill="#A26769"/>
+  <text x="66" y="235" font-size="13" fill="#8A6B70">agent</text><rect x="120" y="224" width="55" height="15" rx="3" fill="#6D2E46"/>
+  <!-- card2 -->
+  <text x="451" y="205" font-size="13" fill="#8A6B70">you</text><rect x="505" y="194" width="120" height="15" rx="3" fill="#A26769"/>
+  <text x="451" y="235" font-size="13" fill="#8A6B70">agent</text><rect x="505" y="224" width="140" height="15" rx="3" fill="#6D2E46"/>
+  <!-- card3 -->
+  <text x="836" y="205" font-size="13" fill="#8A6B70">you</text><rect x="890" y="194" width="55" height="15" rx="3" fill="#A26769"/>
+  <text x="836" y="235" font-size="13" fill="#8A6B70">agent</text><rect x="890" y="224" width="210" height="15" rx="3" fill="#6D2E46"/>
+
+  <!-- trust-grows arrow -->
+  <line x1="60" y1="350" x2="1120" y2="350" stroke="#6D2E46" stroke-width="3"/>
+  <polygon points="1120,350 1106,343 1106,357" fill="#6D2E46"/>
+  <text x="1112" y="334" text-anchor="end" font-size="16" font-weight="700" fill="#6D2E46">trust grows →</text>
+  <text x="600" y="404" text-anchor="middle" font-size="17" font-style="italic" fill="#6D2E46">Autonomy follows trust — earned with skills + verification, not hoped for.</text>
+</svg>
